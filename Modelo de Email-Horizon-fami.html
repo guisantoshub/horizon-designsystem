@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="x-apple-disable-message-reformatting" />
+  <title>Atualização de Boleta</title>
+  <style type="text/css">
+    /* Client-specific resets */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+    a { text-decoration: none; }
+
+    /* Mobile */
+    @media screen and (max-width: 620px) {
+      .wrapper { width: 100% !important; max-width: 100% !important; }
+      .px { padding-left: 24px !important; padding-right: 24px !important; }
+      .h1 { font-size: 24px !important; line-height: 32px !important; }
+      .stat-label { width: 40% !important; }
+      .stat-value { width: 60% !important; }
+      .hide-mobile { display: none !important; }
+      .hero-pad { padding: 32px 24px 32px 24px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0; padding:0; background-color:#f2efe9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">
+
+  <!-- Preheader (hidden) -->
+  <div style="display:none; font-size:1px; color:#f2efe9; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden;">
+    A boleta {{boletaId}} teve seu status atualizado para {{novoStatus}}. Confira os detalhes.
+  </div>
+
+  <!-- Body wrapper -->
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f2efe9;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+
+        <!-- Container -->
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="width:600px; max-width:600px; background-color:#ffffff;">
+
+          <!-- Header (dark) -->
+          <tr>
+            <td style="background-color:#263C59; padding: 28px 40px; border-bottom: 2px solid #C19C63;" class="px">
+              <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="left" valign="middle" style="font-family: Georgia, 'Times New Roman', serif; font-size:24px; letter-spacing: 2px; color:#ffffff; font-weight: 400;">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr>
+                      <td valign="middle" style="padding-right:12px; line-height:0;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNyAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI2LjYwNTMgMjMuOTQyMUMyNi43NTcxIDIzLjkxNTIgMjYuNzc4MSAyMy45MTcyIDI2LjkyOTMgMjMuOTQ3OEMyNi45ODI2IDI0LjE0NjMgMjYuOTYyMSAyNS44OTkyIDI2Ljk2MTcgMjYuMjQwN0wyNi45NTQ3IDMxLjk4OEwwLjM2MzYxOCAzMS45OTM0QzAuMjA3NzAyIDMyLjAwMDkgMC4xMzQyNjUgMzIuMDE2NiAwIDMxLjk0QzAuMDM1MTE5MyAzMS43NDA1IDAuNDA1MzE4IDMwLjcyMDggMC40ODc0ODkgMzAuNDg2MUwxLjYwMDkxIDI3LjMxNThDOS41NzYyIDI1LjY5MTggMTguNDYzNyAyNC4yOTY0IDI2LjYwNTMgMjMuOTQyMVoiIGZpbGw9IiMyNjNDNTkiPjwvcGF0aD4KPHBhdGggZD0iTTIxLjAxMTEgMTAuMTExMkMyMi45NjQ5IDguNzc0NTUgMjUuMTQ2OSA2Ljk3MjE5IDI2Ljk2NSA1LjQ0OTFMMjYuOTM1OCA2LjY3NzE1QzI3LjA3NjcgMTEuNzY5OCAyNi45MzY2IDE3LjIwNjEgMjYuOTc5NCAyMi4zMzg3QzI0LjcwMjggMjIuNDI2MiAyMi40Mjk3IDIyLjU5MTUgMjAuMTY0MSAyMi44MzQzTDIwLjczNTYgMTQuMTAxN0MyMC43NjcgMTMuNjM1NiAyMC45MDI5IDExLjEyMDcgMjAuOTc4OCAxMC44MDU0QzIwLjk2ODIgMTAuNjY5NCAyMS4wMDE0IDEwLjI2ODUgMjEuMDExMSAxMC4xMTEyWiIgZmlsbD0iI0MxOUM2MyI+PC9wYXRoPgo8cGF0aCBkPSJNMjEuMDEwOSAxMC4xMTEyQzIyLjk2NDcgOC43NzQ1NSAyNS4xNDY4IDYuOTcyMTkgMjYuOTY0OCA1LjQ0OTFMMjYuOTM1NiA2LjY3NzE1QzI2LjU1NjggNy4zMDQxOCAyNi45Njk4IDkuNDAwNTMgMjYuODQ2OSA5Ljg0MjUxQzI2LjY5NjEgOS43NzY1NSAyNi42Mzk4IDkuNzUzMiAyNi41MDc3IDkuNjU2MDJDMjUuNjgwOCA5LjYyMTk4IDIyLjkzODkgMTEuNzU4OSAyMi4xMDYzIDEyLjI0NjFDMjEuOTQ2NCAxMi4zMzk3IDIxLjE5NDMgMTMuMDA5NCAyMS4wODAyIDEzLjA1MjVDMjEuMDY4OCAxMi4wOTMxIDIxLjEwODQgMTEuNzk3MSAyMC45Nzg2IDEwLjgwNTRDMjAuOTY4IDEwLjY2OTQgMjEuMDAxMiAxMC4yNjg1IDIxLjAxMDkgMTAuMTExMloiIGZpbGw9IiNEQUI3N0YiPjwvcGF0aD4KPHBhdGggZD0iTTE5LjI5NzMgMTEuMjk0NkwxOS4zNjExIDExLjM0OUMxOS40MDg5IDExLjYxNzMgMTkuMjMwMyAxMy45ODQ3IDE5LjIwMjkgMTQuNDIxMUwxOC42NDcyIDIyLjk5MkMxNi4yODcyIDIzLjIyNDkgMTMuOTI3OCAyMy42NTY0IDExLjYzNSAyMy44NzkxTDExLjYxODMgMjMuODYwN0MxMS42MDk0IDIzLjY5OTQgMTEuOTYzMSAyMS44Nzk0IDEyLjAxNDcgMjEuNTg4TDEzLjEyODkgMTUuMjUxOEMxNS4xODY3IDEzLjg3OTIgMTcuMTg3MyAxMi44MjU4IDE5LjI5NzMgMTEuMjk0NloiIGZpbGw9IiNENUIyNzgiPjwvcGF0aD4KPHBhdGggZD0iTTExLjMzNDEgMTYuMjg1M0wxMS4zNjk4IDE2LjMzMDFDMTEuMzAwNiAxNy4wODgyIDExLjA4NDMgMTcuOTk5OSAxMC45NTU3IDE4Ljc2MDlDMTAuNjU5MiAyMC41MTY5IDEwLjIyMzYgMjIuNDI3IDEwLjAxMjcgMjQuMTg0NUM3LjQ2NjI0IDI0LjU2NzggNC44MjY3IDI1LjEyODQgMi4zMDQwMSAyNS42NzM4TDIuMjc1MzUgMjUuNjM4NkMyLjIyOTI4IDI1LjM5OTggMy45MDA4IDIwLjc3ODkgNC4xMjIwNCAyMC4xNTA2QzQuNjI2NTYgMTkuODQ3NSA1LjgxNjg3IDE5LjI5NiA2LjQxMjk3IDE4Ljk5MDhDOC4xMzQwNiAxOC4xMDk2IDkuNjYzODIgMTcuMjY1IDExLjMzNDEgMTYuMjg1M1oiIGZpbGw9IiNDOEE0NkMiPjwvcGF0aD4KPHBhdGggZD0iTTEyLjM3MzUgMTAuMzA3M0wxMi40NjU4IDEwLjM0NDZDMTIuMjg5NyAxMS42MDgzIDExLjk3NDYgMTMuMTM4MyAxMS43MzA5IDE0LjQwNjJDMTAuMDI3MiAxNS41MDk1IDYuODAyNDMgMTcuMjIxIDQuOTU1MTIgMTguMTMxNEw0LjkwNTM3IDE4LjEyOThMNC44NjkxNCAxOC4wNTE1QzUuMzU3MDYgMTYuNjAwNiA1Ljg4NjEzIDE0Ljk2MDkgNi40NDM4NSAxMy41NTA0QzYuODEzNSAxMy4yOTg3IDcuOTk5MTkgMTIuNzI0NyA4LjQ1NDA4IDEyLjQ4MTVDOS43NzE1OCAxMS43NzcyIDExLjA3ODMgMTEuMDUyMyAxMi4zNzM1IDEwLjMwNzNaIiBmaWxsPSIjREFCNzdGIj48L3BhdGg+CjxwYXRoIGQ9Ik0xOS43ODQ1IDUuNTg3MjJDMTkuODYzOSA1LjgzOTc4IDE5LjU3NCA4Ljg5NTI5IDE5LjUzNzggOS4zOTk4QzE3LjU2NyAxMC43ODkyIDE1LjU1MDUgMTIuMTExMyAxMy40OTE2IDEzLjM2MzhDMTMuNDQ1NiAxMy4wMjcyIDE0LjA5ODYgOS43ODk2IDE0LjIwMDQgOS4yMzk4OEMxNi4xMTgxIDguMDE3MyAxNy45MDIgNi44NzQzMyAxOS43ODQ1IDUuNTg3MjJaIiBmaWxsPSIjREFCNzdGIj48L3BhdGg+CjxwYXRoIGQ9Ik0yNi44ODgzIDBDMjYuOTk1NiAwLjE0NzQwOSAyNi45NzM0IDMuMTc0MSAyNi45NzYyIDMuNTU1NThDMjQuOTkzOSA1LjI2OTE2IDIzLjMyNjIgNi42NDU1NyAyMS4yMTE1IDguMjA1NDNMMjEuMTI1IDguMTY5MUMyMS4xOTExIDYuOTQ1MjggMjEuMjkxNCA1LjY5NDUgMjEuMzc2NiA0LjQ2OThDMjEuODMzNSA0LjA0NTQ2IDIyLjgxMzEgMy4zNjQzNCAyMy4zMzY4IDIuOTQ1NDhDMjQuNTM1OSAxLjk4NjQ5IDI1Ljc1MiAxLjAzNzc4IDI2Ljg4ODMgMFoiIGZpbGw9IiNCNzkyNUYiPjwvcGF0aD4KPC9zdmc+" width="27" height="32" alt="Horizon" style="display:block; border:0;" />
+                      </td>
+                      <td valign="middle" style="font-family: Georgia, 'Times New Roman', serif; font-size:24px; letter-spacing: 1px; color:#ffffff; font-weight: 400;">
+                        Horizon
+                      </td>
+                    </tr></table>
+                  </td>
+                  <td align="right" class="hide-mobile" style="font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:11px; letter-spacing: 2px; color:#a9b5c4; text-transform: uppercase;">
+                    Horizon&nbsp;Suite
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Hero -->
+          <tr>
+            <td class="hero-pad px" style="padding: 48px 40px 8px 40px; background-color:#ffffff;">
+              <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:11px; letter-spacing: 3px; color:#C19C63; text-transform: uppercase; font-weight: 600; padding-bottom: 14px;">
+                    &mdash; Atualização de Boleta
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h1" style="font-family: Georgia, 'Times New Roman', serif; font-size:30px; line-height:38px; color:#0b0b0c; font-weight: 400; padding-bottom: 20px;">
+                    O status da sua boleta foi atualizado.
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:15px; line-height:24px; color:#4a4a4a; padding-bottom: 8px;">
+                    Olá,
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:15px; line-height:24px; color:#4a4a4a; padding-bottom: 28px;">
+                    A boleta <strong style="color:#0b0b0c;">{{boletaId}}</strong> da solicitação <strong style="color:#0b0b0c;">{{solicitacaoId}}</strong> teve seu status atualizado para
+                    <span style="display:inline-block; background-color:#eef2f7; color:#263C59; font-size:12px; font-weight:600; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 2px; border:1px solid #cfd8e3; margin-left:2px;">{{novoStatus}}</span>.
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Details card -->
+          <tr>
+            <td class="px" style="padding: 0 40px 8px 40px;">
+              <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color:#fafaf7; border: 1px solid #ece7db;">
+                <tr>
+                  <td style="padding: 22px 26px 10px 26px; font-family: Georgia, 'Times New Roman', serif; font-size:13px; letter-spacing: 2px; color:#0b0b0c; text-transform: uppercase; font-weight:600;">
+                    Detalhes da Operação
+                  </td>
+                </tr>
+
+                <!-- Row: Cliente -->
+                <tr>
+                  <td style="padding: 0 26px;">
+                    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-top:1px solid #ece7db;">
+                      <tr>
+                        <td class="stat-label" width="38%" style="padding: 14px 0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:12px; color:#8a8a8a; text-transform: uppercase; letter-spacing: 1px;">
+                          Cliente
+                        </td>
+                        <td class="stat-value" width="62%" align="right" style="padding: 14px 0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:14px; color:#0b0b0c; font-weight:500;">
+                          {{clienteFinal}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Row: Instituição -->
+                <tr>
+                  <td style="padding: 0 26px;">
+                    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-top:1px solid #ece7db;">
+                      <tr>
+                        <td class="stat-label" width="38%" style="padding: 14px 0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:12px; color:#8a8a8a; text-transform: uppercase; letter-spacing: 1px;">
+                          Instituição
+                        </td>
+                        <td class="stat-value" width="62%" align="right" style="padding: 14px 0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:14px; color:#0b0b0c; font-weight:500;">
+                          {{instituicao}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Row: Ativo -->
+                <tr>
+                  <td style="padding: 0 26px;">
+                    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-top:1px solid #ece7db;">
+                      <tr>
+                        <td class="stat-label" width="38%" style="padding: 14px 0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:12px; color:#8a8a8a; text-transform: uppercase; letter-spacing: 1px;">
+                          Ativo
+                        </td>
+                        <td class="stat-value" width="62%" align="right" style="padding: 14px 0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:14px; color:#0b0b0c; font-weight:500;">
+                          {{ativo}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Row: Tipo -->
+                <tr>
+                  <td style="padding: 0 26px;">
+                    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-top:1px solid #ece7db;">
+                      <tr>
+                        <td class="stat-label" width="38%" style="padding: 14px 0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:12px; color:#8a8a8a; text-transform: uppercase; letter-spacing: 1px;">
+                          Tipo
+                        </td>
+                        <td class="stat-value" width="62%" align="right" style="padding: 14px 0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:14px; color:#0b0b0c; font-weight:500;">
+                          {{tipo}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Row: Quantidade -->
+                <tr>
+                  <td style="padding: 0 26px;">
+                    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-top:1px solid #ece7db;">
+                      <tr>
+                        <td class="stat-label" width="38%" style="padding: 14px 0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:12px; color:#8a8a8a; text-transform: uppercase; letter-spacing: 1px;">
+                          Quantidade
+                        </td>
+                        <td class="stat-value" width="62%" align="right" style="padding: 14px 0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:14px; color:#0b0b0c; font-weight:500;">
+                          {{qtd}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Row: Valor Financeiro (destaque) -->
+                <tr>
+                  <td style="padding: 0 26px;">
+                    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-top:1px solid #ece7db;">
+                      <tr>
+                        <td class="stat-label" width="38%" style="padding: 16px 0 22px 0; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:12px; color:#8a8a8a; text-transform: uppercase; letter-spacing: 1px;">
+                          Valor Financeiro
+                        </td>
+                        <td class="stat-value" width="62%" align="right" style="padding: 16px 0 22px 0; font-family: Georgia, 'Times New Roman', serif; font-size:20px; color:#0b0b0c; font-weight:600;">
+                          {{vlrFinan}}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- CTA -->
+          <tr>
+            <td class="px" style="padding: 32px 40px 12px 40px;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="left">
+                <tr>
+                  <td align="center" style="background-color:#263C59; border: 1px solid #263C59;">
+                    <a href="https://horizon.fami.capital" target="_blank" style="display:inline-block; padding: 14px 28px; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:13px; letter-spacing: 2px; text-transform: uppercase; font-weight:600; color:#ffffff; text-decoration:none;">
+                      Acessar Horizon Suite &nbsp;&rsaquo;
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Helper text -->
+          <tr>
+            <td class="px" style="padding: 24px 40px 40px 40px; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:13px; line-height:20px; color:#7a7a7a;">
+              Para mais detalhes sobre esta operação, acesse o <a href="https://horizon.fami.capital" style="color:#263C59; text-decoration:underline;">Horizon Suite</a>. Em caso de dúvidas, fale com o seu assessor.
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding: 0 40px;">
+              <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="1" style="background-color:#ece7db; font-size:0; line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td class="px" style="padding: 28px 40px 36px 40px; background-color:#ffffff;">
+              <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="font-family: Georgia, 'Times New Roman', serif; font-size:16px; letter-spacing: 1px; color:#263C59; padding-bottom: 10px; font-weight: 400;">
+                    Horizon
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:11px; line-height:18px; color:#9a9a9a; padding-bottom: 14px;">
+                    Plataforma Horizon Suite &mdash; gestão e acompanhamento de operações.<br/>
+                    Este é um email automático de notificação &mdash; por favor, não responda.
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:11px; color:#9a9a9a;">
+                    &copy; 2026 Horizon. Todos os direitos reservados.
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Container -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
